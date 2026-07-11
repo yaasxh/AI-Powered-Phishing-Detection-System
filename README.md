@@ -1,114 +1,249 @@
-<h1 align="center"> 🚨 AI-powered phishing detection system 🚨 </h1>
+<h1 align="center">🚨 AI-Powered Phishing Detection System 🚨</h1>
 
 ![image](https://github.com/user-attachments/assets/cdfb7afc-6eeb-4fdb-9b26-6bcedc247ff4)
 
+## ⚙️ About the Project
 
-##  ⚙️ About the Project 
+An AI-powered phishing detection system that uses **Natural Language Processing (NLP)** and **Machine Learning** to classify emails as **Phishing** or **Safe**.
 
-An AI-powered phishing detection system using machine learning to classify emails as **phishing** or **safe**. Built using **Python**, **Streamlit**, and **scikit-learn**, this system analyzes email bodies and URLs to detect phishing attempts.
+Built with **Python**, **Streamlit**, **scikit-learn**, and **NLTK**, the system analyzes email content and URL-based features to detect phishing attacks in real time.
 
 [![Phishing Detection](https://img.shields.io/badge/Phishing%20Detection-Active-brightgreen)](https://ai-powered-phishing-detection-system-ples7i6bq2tzkaguiykzzt.streamlit.app/)
 
-## 🚀 Features
+---
 
-- **Email Body Analysis**: Uses text processing to identify phishing patterns.
-- **URL Scanning**: Extracts and evaluates URLs within the email to detect malicious links.
-- **Machine Learning**: Trained with labeled phishing data to make predictions on email content.
-- **Interactive UI**: Built with Streamlit for real-time predictions.
+# 🚀 Features
 
-## 🧑‍💻 Technologies Used
+- 📧 Email Body Analysis using NLP
+- 🔗 URL Feature Extraction and Analysis
+- 🤖 Machine Learning-based Classification
+- 📊 Real-time Prediction with Confidence Score
+- 📈 Risk Level Visualization
+- 🎨 Interactive Streamlit Interface
+- 💾 Train the Model with Custom Datasets
 
-- **Python** 🐍
-- **Streamlit** 🌐
-- **scikit-learn** 🤖
-- **pandas** 📊
-- **nltk** 🧠
-- **Requests** 🌍
-- **BeautifulSoup** 🍲
+---
 
-## 🎯 Installation & Setup
+# 🧠 Technologies Used
 
-1. Clone the repository
-   
-   ```bash
-   git clone https://github.com/yourusername/AI-Powered-Phishing-Detection-System.git
-   cd AI-Powered-Phishing-Detection-System
+- Python 🐍
+- Streamlit 🌐
+- scikit-learn 🤖
+- pandas 📊
+- NumPy 🔢
+- NLTK 🧠
+- Joblib 💾
 
-2. Install Dependencies
-   Create and activate a virtual environment, then install required packages:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # For macOS/Linux
-   venv\Scripts\activate      # For Windows
+---
 
-   pip install -r requirements.txt
+# 🎯 Machine Learning Pipeline
 
-3. Run the App
-   Start the Streamlit app to launch the phishing detection system:
-   ```bash
-   streamlit run phishing_detection.py
+```
+Email
+   │
+   ▼
+Text Cleaning
+(Lowercase, Remove Stopwords, Remove Special Characters)
+   │
+   ▼
+CountVectorizer (Bag of Words)
+   │
+   ▼
+URL Feature Extraction
+   │
+   ▼
+Logistic Regression Classifier
+   │
+   ▼
+Prediction
+(Phishing / Safe)
+```
 
-4. Upload Dataset for Training (Optional)
-   Upload a CSV file with columns email_body (content of the email) and label (1 for phishing, 0 for safe) to train the model.
+---
 
-🔍 How to Use
+# 📂 Installation
 
-- **Training the Model**: Upload a CSV file containing emails labeled as phishing or safe.
-- **Prediction**: Enter the body of an email, and the system will classify it as phishing or safe.
+### 1. Clone the Repository
 
-Example Email to Test:
+```bash
+git clone https://github.com/yourusername/AI-Powered-Phishing-Detection-System.git
 
-- **Phishing Email**:
-  
-  ```bash
-  Congratulations! You've won a $1000 gift card. Click here to claim your prize: http://phishing.com
+cd AI-Powered-Phishing-Detection-System
+```
 
-- **Safe Email**:
+---
 
-  ```bash
-  Hey, just checking in on our project. Let me know your availability for a meeting.
+### 2. Create a Virtual Environment
 
-5. Check Prediction
-   Click Check Phishing to see the prediction results for the email you entered.
+#### Windows
 
-## 📊 Results
+```bash
+python -m venv .venv
 
-The system will display whether the email is a phishing attempt or safe based on its body content and URL features.
+.venv\Scripts\activate
+```
 
-## 🛠️ Contributing
+#### macOS/Linux
 
-Contributions are welcome! If you'd like to improve the system or add new features, feel free to fork the repository and submit a pull request.
+```bash
+python3 -m venv .venv
 
-## 🙌 Acknowledgements
+source .venv/bin/activate
+```
 
-- Streamlit for creating the amazing interface.
-- scikit-learn for machine learning tools.
-- Shields.io for badges.
-- FontAwesome for awesome icons.
+---
 
-## 💻 Preview 
+### 3. Install Dependencies
 
-## Phishing Email:
+```bash
+pip install -r requirements.txt
+```
 
-![test 1](https://github.com/user-attachments/assets/d1bdae97-ee19-4ac1-bd3f-87b98bad89b8)
+---
 
-## Safe Email:
+### 4. Run the Application
 
-![test 2](https://github.com/user-attachments/assets/dcef2e5c-01d8-4fb3-9343-6e73d7cb3588)
+```bash
+streamlit run phishing_detection.py
+```
 
+---
 
-## 🌐 Connect with Me 
+# 📊 Training the Model
 
-- 📧 [Email](mailto:gauravghandat12@gmail.com)
-- 💼 [LinkedIn](www.linkedin.com/in/gaurav-ghandat-68a5a22b4)
+Upload a CSV file containing the following columns:
 
+| Column | Description |
+|---------|-------------|
+| email_body | Email content |
+| label | 1 = Phishing, 0 = Safe |
 
+After uploading the dataset, click **Train Model**.
 
+---
 
+# 🔍 How to Use
 
+1. Upload your dataset (optional).
+2. Train the model.
+3. Paste an email body.
+4. Click **Check Phishing**.
+5. View:
+   - Prediction
+   - Confidence Score
+   - Risk Level
 
+---
 
+# 📧 Example Emails
 
+## 🚨 Phishing Email
 
+```text
+Subject: Urgent Account Verification
 
-   
+Dear Customer,
+
+We detected suspicious activity on your account.
+
+Verify immediately:
+
+https://secure-bank-login-update.com
+
+Failure to verify within 24 hours will result in account suspension.
+
+Thank you,
+Security Team
+```
+
+---
+
+## ✅ Safe Email
+
+```text
+Subject: Team Meeting Reminder
+
+Hi Team,
+
+This is a reminder that our weekly meeting is scheduled for tomorrow at 10 AM.
+
+Regards,
+Project Manager
+```
+
+---
+
+# 📊 Results
+
+The application predicts whether an email is:
+
+- 🚨 Phishing
+- ✅ Safe
+
+It also displays:
+
+- Prediction Confidence
+- Risk Level
+- Recent Prediction History
+
+---
+
+# 📸 Preview
+
+## Phishing Email
+
+![test1](https://github.com/user-attachments/assets/d1bdae97-ee19-4ac1-bd3f-87b98bad89b8)
+
+---
+
+## Safe Email
+
+![test2](https://github.com/user-attachments/assets/dcef2e5c-01d8-4fb3-9343-6e73d7cb3588)
+
+---
+
+# 🛠 Future Improvements
+
+- TF-IDF Vectorizer
+- BERT-based Email Classification
+- URL Reputation APIs
+- Email Attachment Analysis
+- Explainable AI (SHAP/LIME)
+- Multi-language Phishing Detection
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a new branch.
+3. Commit your changes.
+4. Open a Pull Request.
+
+---
+
+# 🙏 Acknowledgements
+
+- Streamlit
+- scikit-learn
+- NLTK
+- pandas
+- NumPy
+- Shields.io
+
+---
+
+# 🌐 Connect with Me
+
+📧 **Email**
+
+**lonkarrohit77@gmail.com**
+
+💼 **LinkedIn**
+
+https://www.linkedin.com/in/rohit-lonkar-746948274/
+
+---
+⭐ If you found this project useful, consider giving it a star on GitHub!
